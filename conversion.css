@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 66.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: rgb(0, 0, 0);
+  line-height: 1.5;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: whitesmoke;
+}
+
+.page {
+  position: absolute;
+  top: 5%;
+  width: 980px;
+  margin: 0 auto;
+}
+
+/*                   Top headers                      */
+.topHeadings {
+  display: flex;
+}
+
+.topHeadings h1 {
+  position: absolute;
+  top: 20%;
+}
+
+/*              --------------------                  */

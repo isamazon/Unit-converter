@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 66.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: rgb(0, 0, 0);
+  line-height: 1.5;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: whitesmoke;
+}
+
+/*                  Header                  */
+.headerc {
+  background-color: black;
+  width: 100%;
+}
+
+.header {
+  color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin: 0 auto;
+  width: 80%;
+}
+
+h3 {
+  font-size: 20px;
+  letter-spacing: 10px;
+  color: white;
+}
+
+/*              --------------------                  */
+
+.welcomePage {
+  position: absolute;
+  top: 5%;
+  width: 980px;
+  margin: 0 auto;
+}
+
+div {
+  display: block;
+}
+.welcome {
+  text-align: center;
+  padding-top: 150px;
+}
+
+.welcome h1 {
+  font-size: 50px;
+}
+
+.welcome p {
+  font-size: 2rem;
+  letter-spacing: 5px;
+}
+
+/*                  Property Buttons                  */
+#categories {
+  margin: 30px 0 60px 0;
+  padding: 0;
+  float: left;
+}
+
+ul {
+  display: block;
+}
+
+#categories li {
+  top: 10%;
+  list-style: none;
+  width: 196px;
+  float: left;
+  text-align: center;
+  padding: 14px 0 20px 0;
+  line-height: 10px;
+}
+
+#categories li a {
+  display: block;
+  color: #444;
+}
+
+#categories li img {
+  height: 95px;
+  padding-bottom: 5px;
+}
+
+a {
+  color: rgb(36, 93, 193);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+li:hover {
+  background-color: grey;
+}
+
+li {
+  display: list-item;
+}
+
+/*              --------------------                  */

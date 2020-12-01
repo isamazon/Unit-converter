@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 66.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: rgb(0, 0, 0);
+  line-height: 1.5;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: whitesmoke;
+}
+.page {
+  position: absolute;
+  top: 5%;
+  width: 980px;
+  margin: 0 auto;
+}
+
+/*                   Top headers                      */
+.cform {
+  position: absolute;
+  top: 50px;
+  float: left;
+  margin-top: 20px;
+  width: 100%;
+}
+
+img {
+  right: 105%;
+  height: 200px;
+  float: left;
+}
+
+.cform h1 {
+  font-size: 50px;
+  letter-spacing: 5px;
+  top: 50px;
+}
+
+#convert_form {
+  top: 12rem;
+  display: block;
+  margin-top: 0em;
+}
+
+input {
+  outline: none;
+}
+
+/*              --------------------                  */
