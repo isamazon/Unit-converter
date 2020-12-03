@@ -55,4 +55,38 @@ document.querySelector(".convertbtn").addEventListener("click", function () {
     result.textContent = `${input} ${cfromMenu.value} = ${sum} ${cToMenu.value}`;
     /*                    ..................                    */
 
-
+    /*                    Minutes to (...)                    */
+    // Minutes to seconds
+  } else if (cfromMenu.value === minutes && cToMenu.value === seconds) {
+    let sum = input * 60;
+    let intoHours = 60 / input;
+    result.classList.remove("hidden");
+    result.textContent = `${input} ${cfromMenu.value} = ${sum} ${cToMenu.value} `;
+    // Minutes to hours
+  } else if (cfromMenu.value === minutes && cToMenu.value === hours) {
+    let sum = input / 60;
+    result.classList.remove("hidden");
+    result.textContent = `${input} ${cfromMenu.value} = ${sum} ${cToMenu.value} `;
+    // Minutes to days
+  } else if (cfromMenu.value === minutes && cToMenu.value === days) {
+    let sum = input / 1440;
+    result.classList.remove("hidden");
+    result.textContent = `${input} ${cfromMenu.value} = ${sum} ${cToMenu.value} `;
+    // Minutes to weeks
+  } else if (cfromMenu.value === minutes && cToMenu.value === weeks) {
+    let sum = input / 10080;
+    result.classList.remove("hidden");
+    result.textContent = `${input} ${cfromMenu.value} = ${sum} ${cToMenu.value} `;
+    // Minutes to months
+  } else if (cfromMenu.value === minutes && cToMenu.value === months) {
+    let sum = input / 10080;
+    result.classList.remove("hidden");
+    result.textContent = `${input} ${cfromMenu.value} = ${sum} ${cToMenu.value} `;
+    // Minutes to Years
+  } else if (cfromMenu.value === minutes && cToMenu.value === years) {
+    let sum = input / 525600;
+    result.classList.remove("hidden");
+    result.textContent = `${input} ${cfromMenu.value} = ${sum} ${cToMenu.value} `;
+  }
+  /*                    ................                    */
+});
