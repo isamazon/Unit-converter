@@ -52,13 +52,17 @@ h3 {
 div {
   display: block;
 }
+/* Flex container */
 .welcome {
   text-align: center;
   padding-top: 150px;
+  display: block;
+  width: 100%;
 }
 
 .welcome h1 {
   font-size: 50px;
+  flex-shrink: 3;
 }
 
 .welcome p {
@@ -112,3 +116,16 @@ li {
 }
 
 /*              --------------------                  */
+
+@media screen and (max-width: 980px) {
+  #categories li {
+    width: calc(100% / 4);
+  }
+  .header,
+  .welcomePage {
+    width: 90%;
+  }
+  .welcome h1 {
+    font-size: 40px;
+  }
+}
