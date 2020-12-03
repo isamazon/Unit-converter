@@ -87,6 +87,45 @@ document.querySelector(".convertbtn").addEventListener("click", function () {
     let sum = input / 525600;
     result.classList.remove("hidden");
     result.textContent = `${input} ${cfromMenu.value} = ${sum} ${cToMenu.value} `;
+    /*                    ................                    */
+    /*                    Hours to (...)                    */
+    // Hours to seconds
+  } else if (cfromMenu.value === hours && cToMenu.value === seconds) {
+    let sum = input * 3600;
+    result.classList.remove("hidden");
+    result.textContent = `${input} ${cfromMenu.value} = ${sum} ${cToMenu.value} `;
+    // Hours to minutes
+  } else if (cfromMenu.value === hours && cToMenu.value === minutes) {
+    let sum = input * 60;
+    result.classList.remove("hidden");
+    result.textContent = `${input} ${cfromMenu.value} = ${sum} ${cToMenu.value} `;
+    // Hours to hours
+  } else if (cfromMenu.value === hours && cToMenu.value === hours) {
+    let sum = input * 1;
+    result.classList.remove("hidden");
+    result.textContent = `${input} ${cfromMenu.value} = ${sum} ${cToMenu.value} `;
+    // Hours to days
+  } else if (cfromMenu.value === hours && cToMenu.value === days) {
+    let sum = input / 24;
+    result.classList.remove("hidden");
+    result.textContent = `${input} ${cfromMenu.value} = ${sum} ${cToMenu.value} `;
+    // Hours to weeks
+  } else if (cfromMenu.value === hours && cToMenu.value === weeks) {
+    let sum = input / 168;
+    result.classList.remove("hidden");
+    result.textContent = `${input} ${cfromMenu.value} = ${sum} ${cToMenu.value} `;
+    // Hours to months
+  } else if (cfromMenu.value === hours && cToMenu.value === months) {
+    let sum = input / 730;
+    result.classList.remove("hidden");
+    result.textContent = `${input} ${cfromMenu.value} = ${sum} ${cToMenu.value} `;
+    // Hours to years
+  } else if (cfromMenu.value === hours && cToMenu.value === years) {
+    let sum = input / 8760;
+    result.classList.remove("hidden");
+    result.textContent = `${input} ${cfromMenu.value} = ${sum} ${cToMenu.value} `;
+    /*                   ................                   */
   }
-  /*                    ................                    */
 });
+
+// Add a Results in other forms options

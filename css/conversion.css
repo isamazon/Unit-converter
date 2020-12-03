@@ -65,12 +65,23 @@ input {
   margin-left: 10px;
   margin-right: 10px;
   height: 30px;
+  border-radius: 60px;
+  outline: none;
+}
+#cnumber {
+  text-align: center;
+  letter-spacing: 3px;
 }
 
 .convertbtn {
   letter-spacing: 3px;
   width: 100px;
   height: 30px;
+  border-radius: 60px;
+  outline: none;
+}
+.convertbtn:hover {
+  color: cyan;
 }
 
 .results {
