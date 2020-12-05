@@ -81,7 +81,7 @@ input {
   outline: none;
 }
 .convertbtn:hover {
-  color: cyan;
+  color: rgb(0, 0, 0);
 }
 
 .results {
@@ -93,5 +93,7 @@ input {
   padding: 0px, 0px;
   color: black;
 }
-
+.hidden {
+  display: none;
+}
 /*              --------------------                  */ ;
