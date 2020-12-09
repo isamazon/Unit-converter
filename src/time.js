@@ -44,9 +44,11 @@ view.button.addEventListener("click", function convert(f, t, v) {
 });
 
 /*  Using a hash map instead of if else statements...  */
-const timeTable = new Map();
+const timeTable = new Map([
+  [JSON.stringify(["seconds", "minutes"]), 1 / 60],
+  [JSON.stringify(["minutes", "hours"]), 1 / 60],
+]);
 // Seconds to ...
-timeTable.set(JSON.stringify(["seconds", "minutes"]), 1 / 60);
 timeTable.set(JSON.stringify(["seconds", "hours"]), 1 / 3600);
 timeTable.set(JSON.stringify(["seconds", "days"]), 1 / 86400);
 timeTable.set(JSON.stringify(["seconds", "weeks"]), 1 / 604800);
@@ -54,7 +56,6 @@ timeTable.set(JSON.stringify(["seconds", "months"]), 1 / 2.628e6);
 timeTable.set(JSON.stringify(["seconds", "years"]), 1 / 3.154e7);
 // Minutes to...
 timeTable.set(JSON.stringify(["minutes", "seconds"]), 1 * 60);
-timeTable.set(JSON.stringify(["minutes", "hours"]), 1 / 60);
 timeTable.set(JSON.stringify(["minutes", "days"]), 1 / 1440);
 timeTable.set(JSON.stringify(["minutes", "weeks"]), 1 / 10080);
 timeTable.set(JSON.stringify(["minutes", "months"]), 1 / 43800);
@@ -75,3 +76,11 @@ timeTable.set(JSON.stringify(["days", "days"]), 1 * 1);
 timeTable.set(JSON.stringify(["days", "weeks"]), 1 / 168);
 timeTable.set(JSON.stringify(["days", "months"]), 1 / 730);
 timeTable.set(JSON.stringify(["days", "years"]), 1 / 8760);
+// Weeks to...
+timeTable.set(JSON.stringify(["weeks", "seconds"]), 1 * 604800);
+timeTable.set(JSON.stringify(["weeks", "minutes"]), 1 * 10080);
+timeTable.set(JSON.stringify(["weeks", "hours"]), 1 * 168);
+timeTable.set(JSON.stringify(["weeks", "days"]), 1 / 7);
+timeTable.set(JSON.stringify(["weeks", "weeks"]), 1 * 1);
+timeTable.set(JSON.stringify(["weeks", "months"]), 1 / 4.345);
+timeTable.set(JSON.stringify(["weeks", "years"]), 1 / 52.143);
