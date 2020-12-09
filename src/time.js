@@ -45,7 +45,7 @@ view.button.addEventListener("click", function convert(f, t, v) {
 
 /*  Using a hash map instead of if else statements...  */
 const timeTable = new Map();
-// First do Seconds to ...
+// Seconds to ...
 timeTable.set(JSON.stringify(["seconds", "minutes"]), 1 / 60);
 timeTable.set(JSON.stringify(["seconds", "hours"]), 1 / 3600);
 timeTable.set(JSON.stringify(["seconds", "days"]), 1 / 86400);
@@ -60,3 +60,10 @@ timeTable.set(JSON.stringify(["minutes", "weeks"]), 1 / 10080);
 timeTable.set(JSON.stringify(["minutes", "months"]), 1 / 43800);
 timeTable.set(JSON.stringify(["minutes", "years"]), 1 / 525600);
 // Hours to...
+timeTable.set(JSON.stringify(["hours", "seconds"]), 1 * 3600);
+timeTable.set(JSON.stringify(["hours", "minutes"]), 1 * 60);
+timeTable.set(JSON.stringify(["hours", "hours"]), 1 * 1);
+timeTable.set(JSON.stringify(["hours", "days"]), 1 / 24);
+timeTable.set(JSON.stringify(["hours", "weeks"]), 1 / 168);
+timeTable.set(JSON.stringify(["hours", "months"]), 1 / 730);
+timeTable.set(JSON.stringify(["hours", "years"]), 1 / 8760);

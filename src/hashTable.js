@@ -65,24 +65,3 @@ function conversionTimes(from, to, v) {
   view.result.classList.remove("hidden");
   view.result.textContent = `${values.inputValue} ${from} = ${sum} ${to} `;
 }
-
-/*  Using a hash map instead of if else statements...  
-const timeTable = new Map();
-// First do Seconds to ...
-timeTable.set(JSON.stringify(["seconds", "minutes"]), 1 / 60);
-timeTable.set(JSON.stringify(["seconds", "hours"]), 1 / 3600);
-timeTable.set(JSON.stringify(["seconds", "days"]), 1 / 86400);
-timeTable.set(JSON.stringify(["seconds", "weeks"]), 1 / 604800);
-timeTable.set(JSON.stringify(["seconds", "months"]), 1 / 2.628e6);
-timeTable.set(
-  JSON.stringify(["seconds", "months"]),
-  values.inputValue / 2.628e6
-);
-
-const convertTimes = (f, t, v) => {
-  const multiplier = timeTable.get(JSON.stringify([f, t]));
-  return v * multiplier;
-};
-
-console.log(convertTimes(state.selectedFrom, state.selectedTo, 2.628e6));
-*/
