@@ -52,3 +52,11 @@ timeTable.set(JSON.stringify(["seconds", "days"]), 1 / 86400);
 timeTable.set(JSON.stringify(["seconds", "weeks"]), 1 / 604800);
 timeTable.set(JSON.stringify(["seconds", "months"]), 1 / 2.628e6);
 timeTable.set(JSON.stringify(["seconds", "years"]), 1 / 3.154e7);
+// Minutes to...
+timeTable.set(JSON.stringify(["minutes", "seconds"]), 1 * 60);
+timeTable.set(JSON.stringify(["minutes", "hours"]), 1 / 60);
+timeTable.set(JSON.stringify(["minutes", "days"]), 1 / 1440);
+timeTable.set(JSON.stringify(["minutes", "weeks"]), 1 / 10080);
+timeTable.set(JSON.stringify(["minutes", "months"]), 1 / 43800);
+timeTable.set(JSON.stringify(["minutes", "years"]), 1 / 525600);
+// Hours to...
