@@ -32,26 +32,61 @@ view.input.addEventListener("change", (e) => {
   values.inputValue = e.target.value;
 });
 
-//console.log(secondsTo.SecToMin);
-
+// Adding a event listener to the convert button to perform if else statements and using function conversion and conversionTimes to convert the values
 view.button.addEventListener("click", function () {
-  if (state.selectedFrom === "seconds" && state.selectedTo === "minutes") {
+  /*                    SECONDS TO (...)                    */
+  if (
+    (state.selectedFrom === "seconds" && state.selectedTo === "minutes") ||
+    (state.selectedFrom === "minutes" && state.selectedTo === "seconds")
+  ) {
     conversion(state.selectedFrom, state.selectedTo, 60);
+  } else if (state.selectedFrom === "seconds" && state.selectedTo === "hours") {
+    conversion(state.selectedFrom, state.selectedTo, 3600);
+  } else if (state.selectedFrom === "seconds" && state.selectedTo === "days") {
+    conversion(state.selectedFrom, state.selectedTo, 86400);
+  } else if (state.selectedFrom === "seconds" && state.selectedTo === "weeks") {
+    conversion(state.selectedFrom, state.selectedTo, 604800);
+  } else if (
+    state.selectedFrom === "seconds" &&
+    state.selectedTo === "months"
+  ) {
+    conversion(state.selectedFrom, state.selectedTo, 2.628e6);
+  } else if (state.selectedFrom === "seconds" && state.selectedTo === "years") {
+    conversion(state.selectedFrom, state.selectedTo, 3.154e7);
+    /*                    MINUTES TO (...)                    */
+  } else if (
+    state.selectedFrom === "minutes" &&
+    state.selectedTo === "seconds"
+  ) {
+    conversion(state.selectedFrom, state.selectedTo, 3.154e7);
   }
+  /*                    ................                    */
 });
 
-function conversion(from, to, conversionValue) {
-  let sum = values.inputValue / conversionValue;
+function conversion(from, to, v) {
+  let sum = values.inputValue / v;
   view.result.classList.remove("hidden");
   view.result.textContent = `${values.inputValue} ${from} = ${sum} ${to} `;
 }
 
-function conversionTimes(from, to, conversionValue) {
-  let sum = values.inputValue * conversionValue;
+function conversionTimes(from, to, v) {
+  let sum = values.inputValue * v;
   view.result.classList.remove("hidden");
   view.result.textContent = `${values.inputValue} ${from} = ${sum} ${to} `;
 }
 
-// Planning out what i need to do to make this work...
+/*  Using a hash map instead of if else statements...  */
+const timeTable = new Map();
+// First do Seconds to ...
+timeTable.set(JSON.stringify(["seconds", "minutes"]), 1 / 60);
+timeTable.set(JSON.stringify(["seconds", "hours"]), 1 / 3600);
+timeTable.set(JSON.stringify(["seconds", "days"]), 1 / 86400);
+timeTable.set(JSON.stringify(["seconds", "weeks"]), 1 / 604800);
+timeTable.set(JSON.stringify(["seconds", "months"]), 1 / 2.628e6);
+timeTable.set(JSON.stringify(["seconds", "months"]), 1 / 2.628e6);
 
-// First i need to have the input value
+const convert = (f, t, v) => {
+  const multiplier = timeTable.get(JSON.stringify([f, t]));
+  return v * multiplier;
+};
+console.log(convert("seconds", "minutes", 3600));
