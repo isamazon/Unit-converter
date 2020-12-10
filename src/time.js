@@ -35,7 +35,20 @@ view.input.addEventListener("change", (e) => {
 });
 
 // Adding a event listener to the convert button to perform if else statements and using function conversion and conversionTimes to convert the values
-view.button.addEventListener("click", function convert(f, t, v) {
+view.button.addEventListener("click", function () {
+  convert();
+});
+
+// Add a keydown event listener to the convert btn
+document.addEventListener("keydown", function (e) {
+  console.log(e.key);
+
+  if (e.key === "Enter") {
+    convert();
+  }
+});
+
+function convert(f, t, v) {
   f = state.selectedFrom;
   t = state.selectedTo;
   v = values.inputValue;
@@ -43,8 +56,7 @@ view.button.addEventListener("click", function convert(f, t, v) {
   const sum = v * multiplier;
   view.result.classList.remove("hidden");
   view.result.textContent = `${v} ${f} = ${sum} ${t} `;
-});
-
+}
 /*  Using a hash map instead of if else statements...  */
 const timeTable = new Map([
   [JSON.stringify(["seconds", "minutes"]), 1 / 60],

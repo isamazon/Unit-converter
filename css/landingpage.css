@@ -129,3 +129,29 @@ li {
     font-size: 40px;
   }
 }
+
+@media screen and (max-width: 700px) {
+  #categories li {
+    width: calc(100% / 3);
+  }
+  .header,
+  .welcomePage {
+    width: 80%;
+  }
+  .welcome h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #categories li {
+    width: calc(100% / 2);
+  }
+  .header,
+  .welcomePage {
+    width: 80%;
+  }
+  .welcome h1 {
+    font-size: 40px;
+  }
+}
