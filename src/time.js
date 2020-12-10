@@ -84,3 +84,11 @@ timeTable.set(JSON.stringify(["weeks", "days"]), 1 / 7);
 timeTable.set(JSON.stringify(["weeks", "weeks"]), 1 * 1);
 timeTable.set(JSON.stringify(["weeks", "months"]), 1 / 4.345);
 timeTable.set(JSON.stringify(["weeks", "years"]), 1 / 52.143);
+// Months to...
+timeTable.set(JSON.stringify(["months", "seconds"]), 1 * 2.628e6);
+timeTable.set(JSON.stringify(["months", "minutes"]), 1 * 43800);
+timeTable.set(JSON.stringify(["months", "hours"]), 1 * 730);
+timeTable.set(JSON.stringify(["months", "days"]), 1 * 30.417);
+timeTable.set(JSON.stringify(["months", "weeks"]), 1 * 4.345);
+timeTable.set(JSON.stringify(["months", "months"]), 1 * 1);
+timeTable.set(JSON.stringify(["months", "years"]), 1 / 12);
