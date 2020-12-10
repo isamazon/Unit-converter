@@ -14,12 +14,14 @@ const values = {
   inputValue: view.input.value,
   resultValue: view.result.value,
 };
-// Form
+
+// Object to store the dropdown menu options as values
 const state = {
   selectedFrom: "",
   selectedTo: "",
 };
 
+// Implemented the change eventlistener to update the selected drop down menus
 view.from.addEventListener("change", (e) => {
   state.selectedFrom = e.target.value;
 });
@@ -27,7 +29,7 @@ view.from.addEventListener("change", (e) => {
 view.to.addEventListener("change", (e) => {
   state.selectedTo = e.target.value;
 });
-
+// To update the value thats put in the
 view.input.addEventListener("change", (e) => {
   values.inputValue = e.target.value;
 });

@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 66.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: rgb(0, 0, 0);
+  line-height: 1.5;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: whitesmoke;
+}
+.page {
+  position: absolute;
+  top: 5%;
+  width: 980px;
+  margin: 0 auto;
+}
+
+/*                   Top headers                      */
+.cform {
+  position: absolute;
+  top: 50px;
+  float: left;
+  margin-top: 20px;
+  width: 100%;
+}
+
+img {
+  right: 105%;
+  height: 200px;
+  float: left;
+}
+
+.cform h1 {
+  font-size: 50px;
+  letter-spacing: 5px;
+  top: 50px;
+}
+
+#convert_form {
+  top: 12rem;
+  display: block;
+  margin-top: 20px;
+}
+
+input {
+  outline: none;
+}
+
+#cnumber,
+#cfrom,
+#cto {
+  width: 150px;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 30px;
+  border-radius: 60px;
+  outline: none;
+}
+#cnumber {
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.convertbtn {
+  letter-spacing: 3px;
+  width: 100px;
+  height: 30px;
+  border-radius: 60px;
+  outline: none;
+}
+.convertbtn:hover {
+  color: rgb(0, 0, 0);
+}
+
+.results {
+  width: 100%;
+  margin-top: 10px;
+  margin-right: 20px;
+  letter-spacing: 4px;
+  font-size: 25px;
+  padding: 0px, 0px;
+  color: black;
+}
+.hidden {
+  display: none;
+}
+/*                 responsive css                     */
+/*              --------------------                  */ ;

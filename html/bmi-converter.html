@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/landingpage.css" />
+    <link rel="stylesheet" href="../css/bmi-converter.css" />
+    <title>Bmi</title>
+  </head>
+  <body>
+    <div class="headerc">
+      <div class="header">
+        <a href="../html/index.html">
+          <h3>Converter.io</h3>
+        </a>
+      </div>
+    </div>
+    <div class="page">
+      <div class="cform">
+        <img src="../pictures/bmi.png" alt="" />
+        <div class="cformr">
+          <h1 class="h1Message">Bmi caculator!</h1>
+          <form action="/calculate" method="post" id="convert_form">
+            <input
+              type="number"
+              size="4"
+              placeholder="Number"
+              name="cnumber"
+              id="cnumber"
+              value=""
+            />
+            <select name="cfrom" id="cfrom">
+              <optgroup label="Main units">
+                <option value="blank"></option>
+              </optgroup>
+            </select>
+            <span class="to">to</span>
+            <select name="cto" id="cto">
+              <optgroup label="Main units">
+                <option value="blank"></option>
+                <option value="seconds">seconds</option>
+                <option value="minutes">minutes</option>
+                <option value="hours">hours</option>
+                <option value="days">days</option>
+                <option value="weeks">weeks</option>
+                <option value="months">months</option>
+                <option value="years">years</option>
+              </optgroup>
+            </select>
+            <button type="button" class="convertbtn">convert</button>
+          </form>
+          <p class="results hidden">Conversion</p>
+        </div>
+      </div>
+    </div>
+    <script src="../src/time.js"></script>
+  </body>
+</html>
