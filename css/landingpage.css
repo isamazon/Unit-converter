@@ -49,9 +49,6 @@ h3 {
   margin: 0 auto;
 }
 
-div {
-  display: block;
-}
 /* Flex container */
 .welcome {
   text-align: center;

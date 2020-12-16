@@ -13,27 +13,29 @@ body {
   font-family: sans-serif;
   color: rgb(0, 0, 0);
   line-height: 1.5;
-  height: 100vh;
-  position: relative;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  background-color: whitesmoke;
 }
 .page {
+  display: flex;
   position: absolute;
   top: 5%;
+  height: 95vh;
   width: 980px;
-  margin: 0 auto;
+  margin: 0px auto;
 }
 
 /*                   Top headers                      */
 .cform {
-  position: absolute;
   top: 50px;
-  float: left;
+  clear: both;
+  flex-shrink: 1;
   margin-top: 20px;
   width: 100%;
+  align-items: center;
+}
+.cformr {
+  width: 900px;
+  margin: 40px 0;
 }
 
 img {
@@ -50,7 +52,6 @@ img {
 
 #convert_form {
   top: 12rem;
-  display: block;
   margin-top: 20px;
 }
 
@@ -96,5 +97,18 @@ input {
 .hidden {
   display: none;
 }
+
+.secondPage {
+  height: 100vh;
+}
+
 /*                 responsive css                     */
+@media screen and (max-width: 980px) {
+  .page .cform {
+    width: 95%;
+  }
+  .cform h1 {
+    color: red;
+  }
+}
 /*              --------------------                  */ ;
