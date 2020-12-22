@@ -16,7 +16,6 @@ body {
   display: flex;
 }
 .page {
-  display: flex;
   position: absolute;
   top: 5%;
   height: 95vh;
@@ -26,6 +25,7 @@ body {
 
 /*                   Top headers                      */
 .cform {
+  display: block;
   top: 50px;
   clear: both;
   flex-shrink: 1;

@@ -41,8 +41,6 @@ view.button.addEventListener("click", function () {
 
 // Add a keydown event listener to the convert btn
 document.addEventListener("keydown", function (e) {
-  console.log(e.key);
-
   if (e.key === "Enter") {
     convert();
   }
