@@ -59,7 +59,7 @@ function convert(f, t, v) {
 const areaTable = new Map();
 // Acres to
 areaTable.set(JSON.stringify(["acres", "acres"]), 1 * 1);
-areaTable.set(JSON.stringify(["acres", "squarecentimeters"]), 1 * 4.047e7);
+areaTable.set(JSON.stringify(["acres", "Square Centimeters"]), 1 * 4.047e7);
 areaTable.set(JSON.stringify(["acres", "squaredecameters"]), 1 * 40.469);
 areaTable.set(JSON.stringify(["acres", "squaredecimeters"]), 1 * 404686);
 areaTable.set(JSON.stringify(["acres", "squarefeet"]), 1 * 43560);
@@ -70,3 +70,40 @@ areaTable.set(JSON.stringify(["acres", "squaremeters"]), 1 * 4047);
 areaTable.set(JSON.stringify(["acres", "squaremiles"]), 1 / 640);
 areaTable.set(JSON.stringify(["acres", "squaremilimeter"]), 1 * 4.047e9);
 areaTable.set(JSON.stringify(["acres", "squareyards"]), 1 / 4840);
+// Square Centimeters to...
+areaTable.set(
+  JSON.stringify(["Square Centimeters", "Square Centimeters"]),
+  1 * 1
+);
+areaTable.set(
+  JSON.stringify(["Square Centimeters", "Square Centimeters"]),
+  1 * 4.047e7
+);
+areaTable.set(
+  JSON.stringify(["Square Centimeters", "squaredecameters"]),
+  1 * 40.469
+);
+areaTable.set(
+  JSON.stringify(["Square Centimeters", "squaredecimeters"]),
+  1 * 404686
+);
+areaTable.set(JSON.stringify(["Square Centimeters", "squarefeet"]), 1 * 43560);
+areaTable.set(
+  JSON.stringify(["Square Centimeters", "squarehectometers"]),
+  1 * 2.471
+);
+areaTable.set(
+  JSON.stringify(["Square Centimeters", "squareinches"]),
+  1 * 6.273e6
+);
+areaTable.set(
+  JSON.stringify(["Square Centimeters", "squarekilometers"]),
+  1 / 247
+);
+areaTable.set(JSON.stringify(["Square Centimeters", "squaremeters"]), 1 * 4047);
+areaTable.set(JSON.stringify(["Square Centimeters", "squaremiles"]), 1 / 640);
+areaTable.set(
+  JSON.stringify(["Square Centimeters", "squaremilimeter"]),
+  1 * 4.047e9
+);
+areaTable.set(JSON.stringify(["Square Centimeters", "squareyards"]), 1 / 4840);

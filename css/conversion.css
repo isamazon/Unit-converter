@@ -16,41 +16,51 @@ body {
   display: flex;
 }
 .page {
+  display: flex;
   position: absolute;
   top: 5%;
-  height: 95vh;
-  width: 980px;
-  margin: 0px auto;
+  height: 90%;
+  width: 100%;
+  margin: 0 auto;
 }
 
 /*                   Top headers                      */
 .cform {
-  display: block;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  height: 50%;
   top: 50px;
+  left: 30%;
+  right: 30%;
   clear: both;
-  flex-shrink: 1;
-  margin-top: 20px;
-  width: 100%;
   align-items: center;
 }
-.cformr {
-  width: 900px;
-  margin: 40px 0;
-}
-
 img {
   right: 105%;
   height: 200px;
   float: left;
 }
-
 .cform h1 {
+  margin-left: 20px;
   font-size: 50px;
   letter-spacing: 5px;
   top: 50px;
 }
+/* Form */
+.cformr {
+  position: absolute;
+  margin: 40px 0;
+  left: 32%;
+  top: 35%;
+  display: flex;
+  flex-direction: row;
+}
 
 #convert_form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   top: 12rem;
   margin-top: 20px;
 }
@@ -62,6 +72,7 @@ input {
 #cnumber,
 #cfrom,
 #cto {
+  position: relative;
   width: 150px;
   margin-left: 10px;
   margin-right: 10px;
@@ -84,7 +95,7 @@ input {
 .convertbtn:hover {
   color: rgb(0, 0, 0);
 }
-
+/*                      */
 .results {
   width: 100%;
   margin-top: 10px;
@@ -104,11 +115,5 @@ input {
 
 /*                 responsive css                     */
 @media screen and (max-width: 980px) {
-  .page .cform {
-    width: 95%;
-  }
-  .cform h1 {
-    color: red;
-  }
 }
 /*              --------------------                  */ ;
