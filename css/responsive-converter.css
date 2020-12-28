@@ -49,6 +49,8 @@ img {
 .fromspan,
 .to {
   align-self: center;
+  font-size: 2rem;
+  margin: 0 5px;
 }
 
 #cnumber,
@@ -58,17 +60,44 @@ img {
   height: 30px;
   width: 180px;
   outline: none;
+  margin: 0 5px;
   border-radius: 60px;
   text-align: center;
   letter-spacing: 3px;
 }
+.convertbtn {
+  letter-spacing: 10px;
+}
 
 /*      Results    */
+.results {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  letter-spacing: 5px;
+}
+.hidden {
+  display: none;
+}
+
+/*      PAGE 2      */
+.page2 {
+  background-color: grey;
+  height: 15vh;
+  position: absolute;
+  width: 100%;
+  top: 80%;
+}
 
 /* Media Queries */
 @media screen and (max-width: 730px) {
   .page {
-    top: 20%;
+    top: 10%;
+    height: 100%;
+  }
+  .page2 {
+    top: 90%;
   }
   .cform {
     flex-direction: column;
@@ -76,12 +105,17 @@ img {
 
   .cformr {
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .fromspan,
   .to {
     font-size: 20px;
-    padding-left: 50%;
+    font-weight: 800;
+    letter-spacing: 10px;
+    color: grey;
+    margin: 10px;
   }
 
   #cnumber,
@@ -89,9 +123,14 @@ img {
   #cto,
   .convertbtn {
     font-size: 20px;
-    width: 100%;
+    width: 90%;
     border-radius: 0px;
     height: 50px;
-    margin: 20px 0;
+    margin: 10px;
   }
+}
+
+.results {
+  flex-direction: column;
+  justify-content: center;
 }

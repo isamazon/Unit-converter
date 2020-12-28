@@ -80,7 +80,7 @@ areaTable.set(JSON.stringify(["acres", "Square Yards"]), 1 / 4840);
 
 // Square Centimeters to...
 
-areaTable.set(JSON.stringify(["Square Centimeters", "acres"]), 1 * 4.047e7);
+areaTable.set(JSON.stringify(["Square Centimeters", "acres"]), 1 / 4.047e7);
 areaTable.set(
   JSON.stringify(["Square Centimeters", "Square Decameters"]),
   1 * 40.469
