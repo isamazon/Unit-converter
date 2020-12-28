@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 66.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: rgb(0, 0, 0);
+  line-height: 1.5;
+  position: relative;
+}
+
+/*        Responsive conversion table      */
+.page {
+  position: absolute;
+  height: 90vh;
+  top: 7%;
+}
+
+.cform {
+  display: flex;
+  width: 100%;
+  height: 250px;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  height: 150px;
+}
+
+.h1Message {
+  font-size: 50px;
+}
+
+/*      Form placement      */
+.cformr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fromspan,
+.to {
+  align-self: center;
+}
+
+#cnumber,
+#cfrom,
+#cto,
+.convertbtn {
+  height: 30px;
+  width: 180px;
+  outline: none;
+  border-radius: 60px;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+/*      Results    */
+
+/* Media Queries */
+@media screen and (max-width: 730px) {
+  .page {
+    top: 20%;
+  }
+  .cform {
+    flex-direction: column;
+  }
+
+  .cformr {
+    flex-direction: column;
+  }
+
+  .fromspan,
+  .to {
+    font-size: 20px;
+    padding-left: 50%;
+  }
+
+  #cnumber,
+  #cfrom,
+  #cto,
+  .convertbtn {
+    font-size: 20px;
+    width: 100%;
+    border-radius: 0px;
+    height: 50px;
+    margin: 20px 0;
+  }
+}

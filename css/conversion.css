@@ -13,10 +13,10 @@ body {
   font-family: sans-serif;
   color: rgb(0, 0, 0);
   line-height: 1.5;
-  display: flex;
 }
 .page {
   display: flex;
+
   position: absolute;
   top: 5%;
   height: 90%;
@@ -28,12 +28,9 @@ body {
 .cform {
   display: flex;
   position: absolute;
-  align-items: center;
   height: 50%;
   top: 50px;
   left: 30%;
-  right: 30%;
-  clear: both;
   align-items: center;
 }
 img {
@@ -54,6 +51,7 @@ img {
   left: 32%;
   top: 35%;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
 }
 
@@ -115,5 +113,11 @@ input {
 
 /*                 responsive css                     */
 @media screen and (max-width: 980px) {
+  img {
+    height: 100px;
+  }
+  .cformr {
+    width: 980;
+  }
 }
 /*              --------------------                  */ ;

@@ -24,14 +24,17 @@ const state = {
 // Implemented the change eventlistener to update the selected drop down menus
 view.from.addEventListener("change", (e) => {
   state.selectedFrom = e.target.value;
+  console.log(state.selectedFrom);
 });
 
 view.to.addEventListener("change", (e) => {
   state.selectedTo = e.target.value;
+  console.log(state.selectedTo);
 });
 // To update the value thats put in the
 view.input.addEventListener("change", (e) => {
   values.inputValue = e.target.value;
+  console.log(values.inputValue);
 });
 
 // Adding a event listener to the convert button to perform if else statements and using function conversion and conversionTimes to convert the values
@@ -52,58 +55,60 @@ function convert(f, t, v) {
   v = values.inputValue;
   const multiplier = areaTable.get(JSON.stringify([f, t]));
   const sum = v * multiplier;
+  console.log(sum);
   view.result.classList.remove("hidden");
   view.result.textContent = `${v} ${f} = ${sum} ${t} `;
 }
 
-const areaTable = new Map();
+const areaTable = new Map([
+  // 1 * 1
+  [JSON.stringify(["acres", "acres"]), 1 * 1],
+  [JSON.stringify(["Square Centimeters", "Square Centimeters"]), 1 * 1],
+]);
 // Acres to
-areaTable.set(JSON.stringify(["acres", "acres"]), 1 * 1);
 areaTable.set(JSON.stringify(["acres", "Square Centimeters"]), 1 * 4.047e7);
-areaTable.set(JSON.stringify(["acres", "squaredecameters"]), 1 * 40.469);
-areaTable.set(JSON.stringify(["acres", "squaredecimeters"]), 1 * 404686);
-areaTable.set(JSON.stringify(["acres", "squarefeet"]), 1 * 43560);
-areaTable.set(JSON.stringify(["acres", "squarehectometers"]), 1 * 2.471);
-areaTable.set(JSON.stringify(["acres", "squareinches"]), 1 * 6.273e6);
-areaTable.set(JSON.stringify(["acres", "squarekilometers"]), 1 / 247);
-areaTable.set(JSON.stringify(["acres", "squaremeters"]), 1 * 4047);
-areaTable.set(JSON.stringify(["acres", "squaremiles"]), 1 / 640);
-areaTable.set(JSON.stringify(["acres", "squaremilimeter"]), 1 * 4.047e9);
-areaTable.set(JSON.stringify(["acres", "squareyards"]), 1 / 4840);
+areaTable.set(JSON.stringify(["acres", "Square Decameters"]), 1 * 40.469);
+areaTable.set(JSON.stringify(["acres", "Square Decimeters"]), 1 * 404686);
+areaTable.set(JSON.stringify(["acres", "Square Feet"]), 1 * 43560);
+areaTable.set(JSON.stringify(["acres", "Square Hectometers"]), 1 * 2.471);
+areaTable.set(JSON.stringify(["acres", "Square Inches"]), 1 * 6.273e6);
+areaTable.set(JSON.stringify(["acres", "Square Kilometers"]), 1 / 247);
+areaTable.set(JSON.stringify(["acres", "Square Meters"]), 1 * 4047);
+areaTable.set(JSON.stringify(["acres", "Square Miles"]), 1 / 640);
+areaTable.set(JSON.stringify(["acres", "Square Milimeters"]), 1 * 4.047e9);
+areaTable.set(JSON.stringify(["acres", "Square Yards"]), 1 / 4840);
+
 // Square Centimeters to...
+
+areaTable.set(JSON.stringify(["Square Centimeters", "acres"]), 1 * 4.047e7);
 areaTable.set(
-  JSON.stringify(["Square Centimeters", "Square Centimeters"]),
-  1 * 1
-);
-areaTable.set(
-  JSON.stringify(["Square Centimeters", "Square Centimeters"]),
-  1 * 4.047e7
-);
-areaTable.set(
-  JSON.stringify(["Square Centimeters", "squaredecameters"]),
+  JSON.stringify(["Square Centimeters", "Square Decameters"]),
   1 * 40.469
 );
 areaTable.set(
-  JSON.stringify(["Square Centimeters", "squaredecimeters"]),
+  JSON.stringify(["Square Centimeters", "Square Decimeters"]),
   1 * 404686
 );
-areaTable.set(JSON.stringify(["Square Centimeters", "squarefeet"]), 1 * 43560);
+areaTable.set(JSON.stringify(["Square Centimeters", "Square Feet"]), 1 * 43560);
 areaTable.set(
-  JSON.stringify(["Square Centimeters", "squarehectometers"]),
+  JSON.stringify(["Square Centimeters", "Square Hectometers"]),
   1 * 2.471
 );
 areaTable.set(
-  JSON.stringify(["Square Centimeters", "squareinches"]),
+  JSON.stringify(["Square Centimeters", "Square Inches"]),
   1 * 6.273e6
 );
 areaTable.set(
-  JSON.stringify(["Square Centimeters", "squarekilometers"]),
+  JSON.stringify(["Square Centimeters", "Square Kilometers"]),
   1 / 247
 );
-areaTable.set(JSON.stringify(["Square Centimeters", "squaremeters"]), 1 * 4047);
-areaTable.set(JSON.stringify(["Square Centimeters", "squaremiles"]), 1 / 640);
 areaTable.set(
-  JSON.stringify(["Square Centimeters", "squaremilimeter"]),
+  JSON.stringify(["Square Centimeters", "Square Meters"]),
+  1 * 4047
+);
+areaTable.set(JSON.stringify(["Square Centimeters", "Square Miles"]), 1 / 640);
+areaTable.set(
+  JSON.stringify(["Square Centimeters", "Square Milimeters"]),
   1 * 4.047e9
 );
-areaTable.set(JSON.stringify(["Square Centimeters", "squareyards"]), 1 / 4840);
+areaTable.set(JSON.stringify(["Square Centimeters", "Square Yards"]), 1 / 4840);
