@@ -13,9 +13,11 @@ view.gender.addEventListener("change", (e) => {
   view.gender = e.target.value;
   console.log(view.gender);
   if (view.gender === "Male") {
-    view.bmiPage.style.backgroundColor = " rgba(0, 255, 234, 0.911)";
+    document.body.classList.add("maleGradient");
+    document.body.classList.remove("femaleGradient");
   } else if (view.gender === "Female") {
-    view.bmiPage.style.backgroundColor = "pink";
+    document.body.classList.add("femaleGradient");
+    document.body.classList.remove("maleGradient");
   } else {
     view.bmiPage.style.backgroundColor = "white";
   }

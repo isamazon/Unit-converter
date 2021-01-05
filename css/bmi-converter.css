@@ -16,17 +16,154 @@ body {
   position: relative;
 }
 
+.femaleGradient {
+  background: linear-gradient(
+    270deg,
+    #fd06ff,
+    #d842d9,
+    #c649c6,
+    #a853a8,
+    #9f6c9f,
+    #877287,
+    #878787,
+    #585858,
+    #3f3c3f,
+    #4d314d,
+    #743774,
+    #943894,
+    #ae31ae,
+    #d020d0,
+    #e312e3,
+    #ff00ff,
+    #ff00ff
+  );
+  background-size: 3400% 3400%;
+
+  -webkit-animation: femaleGradient 30s ease infinite;
+  -moz-animation: femaleGradient 30s ease infinite;
+  -o-animation: femaleGradient 30s ease infinite;
+  animation: femaleGradient 30s ease infinite;
+}
+
+@-webkit-keyframes femaleGradient {
+  0% {
+    background-position: 0% 51%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 51%;
+  }
+}
+@-moz-keyframes femaleGradient {
+  0% {
+    background-position: 0% 51%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 51%;
+  }
+}
+@-o-keyframes femaleGradient {
+  0% {
+    background-position: 0% 51%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 51%;
+  }
+}
+@keyframes femaleGradient {
+  0% {
+    background-position: 0% 51%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 51%;
+  }
+}
+
+.maleGradient {
+  background: linear-gradient(
+    270deg,
+    #00fdff,
+    #00dddf,
+    #04babb,
+    #048f90,
+    #037172,
+    #045354,
+    #043434,
+    #0e3838,
+    #000000,
+    #204947,
+    #347874,
+    #42aca6,
+    #2ec5bc,
+    #21e1d5,
+    #00ffef
+  );
+  background-size: 3000% 3000%;
+
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 44%;
+  }
+  50% {
+    background-position: 100% 57%;
+  }
+  100% {
+    background-position: 0% 44%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 44%;
+  }
+  50% {
+    background-position: 100% 57%;
+  }
+  100% {
+    background-position: 0% 44%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 44%;
+  }
+  50% {
+    background-position: 100% 57%;
+  }
+  100% {
+    background-position: 0% 44%;
+  }
+}
+
 /*        Responsive conversion table      */
 .Bmipage {
   position: absolute;
   height: 90vh;
-  top: 140%;
+  top: 10%;
+  margin: 150px 0;
   z-index: 1;
-  width: 60%;
+  width: 980px;
   background-color: rgb(255, 255, 255);
+  /*background-color: #0d1117;*/
   border: 1px solid rgba(0, 255, 234, 0.911);
   border-radius: 50px;
   box-shadow: 10px 50px 100px;
+  animation: slide_up 1.1s ease;
 }
 /*      Forms     */
 .c-form {
@@ -123,11 +260,11 @@ img {
 
 /*      PAGE 2      */
 .page2 {
-  background-color: grey;
-  margin-top: 400px;
+  background-color: rgb(122, 122, 122, 0.7);
   height: 15vh;
   position: absolute;
   width: 100%;
+  top: 120%;
 }
 
 /*          Scroll bar          */
@@ -200,5 +337,18 @@ img {
     justify-content: center;
     padding: 60px 10px;
     font-size: 20px;
+  }
+}
+
+/*        ANIMATIONS        */
+@keyframes slide_up {
+  0% {
+    transform: translateX(-1500px);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0px);
   }
 }
