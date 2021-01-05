@@ -13,46 +13,94 @@ body {
   font-family: sans-serif;
   color: rgb(0, 0, 0);
   line-height: 1.5;
-  height: 100vh;
+  height: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  background-color: whitesmoke;
 }
+.landingpagebody {
+  /* Gradient */
+  background: linear-gradient(
+    271deg,
+    #0dffc1,
+    #67ffd8,
+    #81a199,
+    #719f94,
+    #8e8e8e,
+    #6c6c6c,
+    #292929,
+    #000000,
+    #000000,
+    #6c6c6c,
+    #7d7d7d,
+    #878787,
+    #849d98,
+    #6c9f94,
+    #69b5a5,
+    #39bfa1,
+    #2bcea9,
+    #1fdbb0,
+    #0eecb9,
+    #00f9c0
+  );
+  background-size: 4000% 4000%;
 
-/*                  Header                  */
-.headerc {
-  background-color: black;
-  width: 100%;
+  -webkit-animation: AnimationName 29s ease infinite;
+  -moz-animation: AnimationName 29s ease infinite;
+  animation: AnimationName 29s ease infinite;
 }
-
-.header {
-  color: white;
-  padding: 20px;
-  margin-bottom: 20px;
-  margin: 0 auto;
-  width: 80%;
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 51%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 51%;
+  }
 }
-
-h3 {
-  font-size: 20px;
-  letter-spacing: 10px;
-  color: white;
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 51%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 51%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 51%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 51%;
+  }
 }
 
 /*              --------------------                  */
 
 .welcomePage {
   position: absolute;
-  top: 5%;
+  top: 15%;
   width: 980px;
   margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50px;
+  height: 80vh;
+  margin-bottom: 20%;
+  box-shadow: 10px 50px 100px;
 }
 
 /* Flex container */
 .welcome {
   text-align: center;
-  padding-top: 150px;
+  padding-top: 100px;
   display: block;
   width: 100%;
 }
@@ -71,7 +119,6 @@ h3 {
 #categories {
   margin: 30px 0 60px 0;
   padding: 0;
-  float: left;
 }
 
 ul {
@@ -94,7 +141,7 @@ ul {
 }
 
 #categories li img {
-  height: 95px;
+  height: 100px;
   padding-bottom: 5px;
 }
 
@@ -105,11 +152,27 @@ a {
 }
 
 li:hover {
-  background-color: grey;
+  background-color: #03dba9;
 }
 
 li {
   display: list-item;
+}
+
+/*          Scroll bar          */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(82, 78, 78);
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 255, 255);
 }
 
 /*              --------------------                  */
@@ -120,10 +183,17 @@ li {
   }
   .header,
   .welcomePage {
-    width: 90%;
+    width: 95%;
+  }
+  .header {
+    align-items: center;
+    justify-content: center;
+  }
+  .welcomePage {
+    height: 150%;
   }
   .welcome h1 {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 
@@ -135,6 +205,9 @@ li {
   .welcomePage {
     width: 80%;
   }
+  .header {
+    margin-left: 0;
+  }
   .welcome h1 {
     font-size: 40px;
   }
@@ -144,9 +217,15 @@ li {
   #categories li {
     width: calc(100% / 2);
   }
-  .header,
+  .header {
+    width: 100%;
+  }
   .welcomePage {
-    width: 80%;
+    width: 90%;
+  }
+  .header {
+    margin: 0px 0px 0px 0px;
+    justify-content: center;
   }
   .welcome h1 {
     font-size: 40px;

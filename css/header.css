@@ -1,0 +1,49 @@
+/*                  Header                  */
+.headerc {
+  display: flex;
+  background-color: black;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  color: rgb(255, 13, 13);
+  padding: 20px;
+  margin-bottom: 20px;
+  margin: 0 auto;
+  width: 100%;
+  margin-left: 100px;
+  justify-content: flex-start;
+}
+
+h3 {
+  font-size: 20px;
+  letter-spacing: 10px;
+  color: white;
+}
+
+@media screen and (max-width: 980px) {
+  .header {
+    width: 100%;
+    margin: 0;
+  }
+  .header {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header {
+    width: 100%;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 500px) {
+    .header {
+      width: 100%;
+      margin: 0px 0px 0px 0px;
+      justify-content: center;
+    }
+  }
+}

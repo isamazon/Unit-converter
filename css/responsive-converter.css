@@ -14,13 +14,17 @@ body {
   color: rgb(0, 0, 0);
   line-height: 1.5;
   position: relative;
+  background-color: white;
+  height: 100vh;
 }
 
 /*        Responsive conversion table      */
 .page {
   position: absolute;
   height: 90vh;
-  top: 7%;
+  top: 10%;
+  box-shadow: 10px 50px 100px;
+  border-radius: 50px;
 }
 
 .cform {
@@ -54,6 +58,7 @@ img {
 }
 
 #cnumber,
+#gender,
 #cfrom,
 #cto,
 .convertbtn {
@@ -72,22 +77,43 @@ img {
 /*      Results    */
 .results {
   display: flex;
+  height: 80px;
+  width: 80%;
   align-items: center;
   justify-content: center;
   font-size: 25px;
   letter-spacing: 5px;
+  border: 2px solid grey;
+  margin: 40px auto;
 }
+
 .hidden {
   display: none;
 }
 
 /*      PAGE 2      */
 .page2 {
-  background-color: grey;
+  background-color: rgb(122, 122, 122, 0.7);
   height: 15vh;
   position: absolute;
   width: 100%;
-  top: 80%;
+  top: 120%;
+}
+
+/*          Scroll bar          */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(82, 78, 78);
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 255, 255);
 }
 
 /* Media Queries */
@@ -97,7 +123,11 @@ img {
     height: 100%;
   }
   .page2 {
-    top: 90%;
+    margin-top: 50px;
+    top: 100%;
+  }
+  .h1Message {
+    font-size: 40px;
   }
   .cform {
     flex-direction: column;
@@ -115,7 +145,7 @@ img {
     font-weight: 800;
     letter-spacing: 10px;
     color: grey;
-    margin: 10px;
+    margin: 10px 20px;
   }
 
   #cnumber,
@@ -126,11 +156,15 @@ img {
     width: 90%;
     border-radius: 0px;
     height: 50px;
-    margin: 10px;
+    margin: 10px 20px;
+    text-align: center;
   }
-}
 
-.results {
-  flex-direction: column;
-  justify-content: center;
+  .results {
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 10px;
+    font-size: 20px;
+  }
 }

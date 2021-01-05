@@ -38,9 +38,7 @@ view.input.addEventListener("change", (e) => {
 });
 
 // Adding a event listener to the convert button to perform if else statements and using function conversion and conversionTimes to convert the values
-view.button.addEventListener("click", function () {
-  convert();
-});
+view.button.addEventListener("click", convert);
 
 // Add a keydown event listener to the convert btn
 document.addEventListener("keydown", function (e) {

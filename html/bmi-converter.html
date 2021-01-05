@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/landingpage.css" />
     <link rel="stylesheet" href="../css/bmi-converter.css" />
+    <link rel="stylesheet" href="../css/header.css" />
     <title>Bmi</title>
   </head>
   <body>
+    <!-- Header -->
     <div class="headerc">
       <div class="header">
         <a href="../html/index.html">
@@ -15,44 +17,65 @@
         </a>
       </div>
     </div>
-    <div class="page">
-      <div class="cform">
+    <!-- start of the first page -->
+    <div class="Bmipage">
+      <div class="c-form">
         <img src="../pictures/bmi.png" alt="" />
-        <div class="cformr">
-          <h1 class="h1Message">Bmi caculator!</h1>
-          <form action="/calculate" method="post" id="convert_form">
-            <input
-              type="number"
-              size="4"
-              placeholder="Number"
-              name="cnumber"
-              id="cnumber"
-              value=""
-            />
-            <select name="cfrom" id="cfrom">
-              <optgroup label="Main units">
-                <option value="blank"></option>
-              </optgroup>
-            </select>
-            <span class="to">to</span>
-            <select name="cto" id="cto">
-              <optgroup label="Main units">
-                <option value="blank"></option>
-                <option value="seconds">seconds</option>
-                <option value="minutes">minutes</option>
-                <option value="hours">hours</option>
-                <option value="days">days</option>
-                <option value="weeks">weeks</option>
-                <option value="months">months</option>
-                <option value="years">years</option>
-              </optgroup>
-            </select>
-            <button type="button" class="convertbtn">convert</button>
-          </form>
-          <p class="results hidden">Conversion</p>
-        </div>
+        <h1 class="h1Message">Bmi caculator!</h1>
+      </div>
+      <div class="gender-form">
+        <form action="/calculate" method="post" id="convert_form">
+          <h2 class="select-gender-h2">Select your gender</h2>
+          <select name="gender" id="gender">
+            <optgroup label="Genders">
+              <option value="empty"></option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </optgroup>
+          </select>
+          <hr />
+        </form>
+      </div>
+      <div class="height-form">
+        <h2 class="select-height-h2">Height</h2>
+        <input
+          type="number"
+          size="4"
+          placeholder="Feet"
+          name="cnumber"
+          id="feet"
+          value=""
+        />
+        <input
+          type="number"
+          size="4"
+          placeholder="inches"
+          name="cnumber"
+          id="inches"
+          value=""
+        />
+      </div>
+      <div class="weight-form">
+        <h2 class="select-weight-h2">Weight</h2>
+        <input
+          type="number"
+          size="4"
+          placeholder="lbs
+              "
+          name="cnumber"
+          id="weight"
+          value=""
+        />
+        <hr />
+      </div>
+      <div class="convert-button">
+        <button type="button" id="convertbtn">convert</button>
+      </div>
+      <div>
+        <p class="results hidden">Conversion</p>
       </div>
     </div>
-    <script src="../src/time.js"></script>
+
+    <script src="../src/bmi.js"></script>
   </body>
 </html>
