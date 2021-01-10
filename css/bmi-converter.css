@@ -165,15 +165,16 @@ body {
 }
 
 .gender-form {
-  position: relative;
-
+  padding-top: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 h2.select-gender-h2 {
-  position: absolute;
-  align-self: center;
+  width: auto;
+  letter-spacing: 2px;
+  font-size: 25px;
 }
 .height-form {
   position: relative;
@@ -212,9 +213,7 @@ img {
 }
 
 /*      Form placement      */
-h2.select-gender-h2 {
-  align-self: center;
-}
+
 h2.select-height-h2,
 h2.select-weight-h2 {
   align-self: center;
@@ -262,10 +261,6 @@ h2.select-weight-h2 {
   margin: 10px auto;
 }
 
-.hidden {
-  display: none;
-}
-
 /*      PAGE 2      */
 .page2 {
   background-color: rgb(122, 122, 122, 0.7);
@@ -300,7 +295,8 @@ h2.select-weight-h2 {
   .Bmipage {
     top: 100%;
     width: 90%;
-    height: 100vh;
+    height: 110vh;
+    z-index: 1;
   }
   .h1Message {
     font-size: 40px;
@@ -334,7 +330,6 @@ h2.select-weight-h2 {
   #convertbtn {
     font-size: 20px;
     width: 90%;
-    border-radius: 0px;
     height: 50px;
     margin: 10px 20px;
     text-align: center;

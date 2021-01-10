@@ -14,11 +14,7 @@ const HWValues = {
   inchesValue: view.inches.value,
   weightValue: view.weight.value,
 };
-
-view.gender.addEventListener("change", (e) => {
-  displayGender(e);
-});
-
+// Create a function to display what gender we have selected visually
 const displayGender = (e) => {
   view.gender = e.target.value;
   console.log(view.gender);
@@ -34,3 +30,65 @@ const displayGender = (e) => {
     document.body.classList.remove("femaleGradient");
   }
 };
+view.gender.addEventListener("change", (e) => {
+  displayGender(e);
+});
+
+// Now we want to create the BMI formula and make it functional
+
+// Add the feet value
+view.feet.addEventListener("change", (e) => {
+  HWValues.feetValue = e.target.value;
+  console.log(HWValues.feetValue);
+});
+// inches value
+view.inches.addEventListener("change", (e) => {
+  HWValues.inchesValue = e.target.value;
+  console.log(HWValues.inchesValue);
+});
+// Weight Value
+view.weight.addEventListener("change", (e) => {
+  HWValues.weightValue = e.target.value;
+  console.log(HWValues.weightValue);
+});
+
+// MODAL WINDOW
+// First we need to store all the modal values
+const modal = {
+  closeModal: document.querySelector(".close-modal"),
+  convert: document.getElementById("convertbtn"),
+  window: document.querySelector(".modalWindow"),
+  blur: document.getElementById("blur"),
+  overlay: document.querySelector(".overlay"),
+
+  h1: document.querySelector(".h1-results"),
+};
+
+// Conversion formula
+let bmiFormula = (feet, inches, pounds) => {
+  let fullHeight = feet * 12 + inches;
+  let formula = (pounds / fullHeight ** fullHeight) * 703;
+  document.getElementById("bmiresult").value = formula;
+};
+
+//Function to open Modal
+modal.convert.addEventListener("click", () => {
+  modal.window.classList.remove("hidden");
+  modal.overlay.classList.remove("hidden");
+
+  bmiFormula(HWValues.feetValue, HWValues.inchesValue, HWValues.weightValue);
+});
+
+//Function to close Modal
+modal.closeModal.addEventListener("click", () => {
+  closeModalF();
+});
+
+const closeModalF = () => {
+  modal.window.classList.add("hidden");
+  modal.overlay.classList.add("hidden");
+};
+
+// Function to show blur background
+
+// Function to convert BMI

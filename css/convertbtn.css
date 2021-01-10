@@ -11,23 +11,41 @@
   justify-content: center;
   align-items: flex-start;
   height: 500px;
-  width: 980px;
+  width: 1200px;
   border-radius: 10px;
-  z-index: 1;
+  z-index: 3;
   background-color: #0d1117;
+  overflow: scroll;
+  animation: popin 1s;
 }
-.hidden-modal {
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 135vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  backdrop-filter: blur(10px);
+}
+.hidden {
   display: none;
 }
+
 .close-modal-btn {
+  display: flex;
   position: absolute;
-  left: 95%;
-  top: -10%;
+  top: 10px;
+  left: 10px;
+  z-index: 4;
+  justify-content: center;
+  align-items: center;
 }
 button.close-modal {
-  border-radius: 50px;
-  padding: 10px 15px;
-  font-size: 25px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
   cursor: pointer;
   outline: none;
 }
@@ -63,20 +81,52 @@ p.resultsP {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  width: 100%;
   position: absolute;
   top: 70%;
   left: 50%;
   transform: translate(-50%);
 }
+
 p.p-results {
   color: white;
   letter-spacing: 5px;
   font-size: 20px;
   text-align: center;
+  padding: 10px 10px;
+}
+h1.h1-results {
+  margin-top: 50px;
+  color: white;
+  align-self: center;
+  font-size: 30px;
+}
+p.p2-results {
+  color: white;
+  letter-spacing: 3px;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 10px;
 }
 #bmiresult {
   height: 40px;
   border-radius: 20px;
+  width: 50%;
+  align-self: center;
   text-align: center;
+  margin: 10px 10px;
 }
+.bmi-chart-img {
+  margin: 20px 0;
+  height: 400px;
+  width: 50%;
+  align-self: center;
+}
+
+@media screen and (max-width: 1160px) {
+  .modal {
+    width: 90%;
+  }
+}
+
+/*                  Animations                    */

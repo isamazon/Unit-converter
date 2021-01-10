@@ -25,8 +25,8 @@
         <h1 class="h1Message">Bmi caculator!</h1>
       </div>
       <div class="gender-form">
+        <h2 class="select-gender-h2">Gender</h2>
         <form action="/calculate" method="post" id="convert_form">
-          <h2 class="select-gender-h2">Select your gender</h2>
           <select name="gender" id="gender">
             <optgroup label="Genders">
               <option value="empty"></option>
@@ -38,6 +38,7 @@
       </div>
       <div class="height-form">
         <h2 class="select-height-h2">Height</h2>
+        <p class="selected-height"></p>
         <input
           type="number"
           size="4"
@@ -60,8 +61,7 @@
         <input
           type="number"
           size="4"
-          placeholder="lbs
-              "
+          placeholder="lbs"
           name="cnumber"
           id="weight"
           value=""
@@ -72,13 +72,13 @@
       </div>
     </div>
     <!--Modal-->
-    <div class="hidden-modal" id="modal-full">
+    <div class="modalWindow hidden" id="blur">
       <div class="modal center">
         <div class="close-modal-btn">
-          <button class="close-modal">&times;</button>
+          <button class="close-modal">dismiss</button>
         </div>
         <div class="conversion-modal-title">
-          <h1 class="bmi-h1">BMI Results</h1>
+          <h1 class="h1-results">Results</h1>
         </div>
         <div class="results-modal">
           <p class="resultsP">
@@ -103,12 +103,20 @@
             id="bmiresult"
             value=""
           />
+          <br />
+          <h1 class="h1-results">BMI chart for adults</h1>
+          <p class="p2-results">
+            This is a graph of BMI categories based <br />
+            on the World Health Organization data. <br />
+            The dashed lines represent subdivisions within a major
+            categorization.
+          </p>
+          <img src="/pictures/bmi-chart.gif" alt="" class="bmi-chart-img" />
         </div>
       </div>
     </div>
     <div class="overlay hidden"></div>
 
-    <script src="../src/conversion-btn.js"></script>
     <script src="../src/bmi.js"></script>
   </body>
 </html>
