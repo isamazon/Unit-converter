@@ -1,11 +1,10 @@
 "use strict";
 // Get all values and put it into a object
 const view = {
-  button: document.querySelector(".convertbtn"),
   form: document.querySelector("form"),
   from: document.getElementById("cfrom"),
   to: document.getElementById("cto"),
-  result: document.querySelector(".results"),
+  result: document.querySelector(".resultsP"),
   input: document.querySelector("input"),
 };
 
@@ -37,16 +36,6 @@ view.input.addEventListener("change", (e) => {
   console.log(values.inputValue);
 });
 
-// Adding a event listener to the convert button to perform if else statements and using function conversion and conversionTimes to convert the values
-view.button.addEventListener("click", convert);
-
-// Add a keydown event listener to the convert btn
-document.addEventListener("keydown", function (e) {
-  if (e.key === "Enter") {
-    convert();
-  }
-});
-
 function convert(f, t, v) {
   f = state.selectedFrom;
   t = state.selectedTo;
@@ -54,10 +43,50 @@ function convert(f, t, v) {
   const multiplier = areaTable.get(JSON.stringify([f, t]));
   const sum = v * multiplier;
   console.log(sum);
-  view.result.classList.remove("hidden");
   view.result.textContent = `${v} ${f} = ${sum} ${t} `;
 }
 
+/*          MODAL WINDOW          */
+
+const modal = {
+  closeModal: document.querySelector(".close-modal"),
+  convert: document.querySelector(".convertbtn"),
+  window: document.querySelector(".modalWindow"),
+  blur: document.getElementById("blur"),
+  overlay: document.querySelector(".overlay"),
+  result: document.getElementById("bmiresult"),
+  h1: document.querySelector(".h1-results"),
+};
+
+//Function to open Modal
+modal.convert.addEventListener("click", () => {
+  openModal();
+  convert();
+});
+function openModal() {
+  modal.window.classList.remove("hidden");
+  modal.overlay.classList.remove("hidden");
+}
+// keydown event to open the modal btn and to convert
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
+    openModal();
+    convert();
+  }
+});
+
+//Function to close Modal
+modal.closeModal.addEventListener("click", () => {
+  closeModalF();
+});
+
+const closeModalF = () => {
+  modal.window.classList.add("hidden");
+  modal.overlay.classList.add("hidden");
+};
+
+/****************       Hash Map        ****************/
 const areaTable = new Map([
   // 1 * 1
   [JSON.stringify(["acres", "acres"]), 1 * 1],

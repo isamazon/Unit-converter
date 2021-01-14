@@ -5,7 +5,7 @@ const view = {
   form: document.querySelector("form"),
   from: document.getElementById("cfrom"),
   to: document.getElementById("cto"),
-  result: document.querySelector(".results"),
+  result: document.querySelector(".resultsP"),
   input: document.querySelector("input"),
 };
 
@@ -32,6 +32,7 @@ view.to.addEventListener("change", (e) => {
 // To update the value thats put in the
 view.input.addEventListener("change", (e) => {
   values.inputValue = e.target.value;
+  console.log(e.target.value);
 });
 
 // Adding a event listener to the convert button to perform if else statements and using function conversion and conversionTimes to convert the values
@@ -55,6 +56,49 @@ function convert(f, t, v) {
   view.result.classList.remove("hidden");
   view.result.textContent = `${v} ${f} = ${sum} ${t} `;
 }
+/*          MODAL WINDOW          */
+
+const modal = {
+  closeModal: document.querySelector(".close-modal"),
+  convert: document.querySelector(".convertbtn"),
+  window: document.querySelector(".modalWindow"),
+  blur: document.getElementById("blur"),
+  overlay: document.querySelector(".overlay"),
+  result: document.getElementById("bmiresult"),
+  h1: document.querySelector(".h1-results"),
+};
+
+//Function to open Modal
+modal.convert.addEventListener("click", () => {
+  openModal();
+  convert();
+});
+function openModal() {
+  modal.window.classList.remove("hidden");
+  modal.overlay.classList.remove("hidden");
+}
+// Keydown event to open modal and convert
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
+    openModal();
+    convert();
+  }
+});
+
+//Function to close Modal
+modal.closeModal.addEventListener("click", () => {
+  closeModalF();
+});
+
+const closeModalF = () => {
+  modal.window.classList.add("hidden");
+  modal.overlay.classList.add("hidden");
+};
+
+/****************       Hash Map        ****************/
+//
+//
+//
 /*  Using a hash map instead of if else statements...  */
 const timeTable = new Map([
   [JSON.stringify(["seconds", "minutes"]), 1 / 60],

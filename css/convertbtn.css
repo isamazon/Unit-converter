@@ -18,7 +18,25 @@
   overflow: scroll;
   animation: popin 1s;
 }
-
+/*                  Seprate modal positioning for time                    */
+.time-modal {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 500px;
+  width: 1200px;
+  border-radius: 10px;
+  z-index: 3;
+  background-color: #0d1117;
+  overflow: scroll;
+  animation: popin 1s;
+}
+/*                                                                        */
 .overlay {
   position: absolute;
   top: 0;
@@ -130,3 +148,11 @@ p.p2-results {
 }
 
 /*                  Animations                    */
+@keyframes slide_up {
+  0% {
+    transform: translateY(1500px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

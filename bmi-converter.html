@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="./css/bmi-converter.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/convertbtn.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass&display=swap"
+      rel="stylesheet"
+    />
     <title>Bmi</title>
   </head>
   <body class="">
@@ -95,14 +100,7 @@
         </div>
         <div class="input-results">
           <p class="p-results">Your BMI:</p>
-          <input
-            type="text"
-            size="4"
-            placeholder="BMI"
-            name="cnumber"
-            id="bmiresult"
-            value=""
-          />
+          <h1 id="bmiresult"></h1>
           <br />
           <h1 class="h1-results">BMI chart for adults</h1>
           <p class="p2-results">
@@ -117,6 +115,6 @@
     </div>
     <div class="overlay hidden"></div>
 
-    <script src="../src/bmi.js"></script>
+    <script src="/src/bmi.js"></script>
   </body>
 </html>

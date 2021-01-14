@@ -60,23 +60,36 @@ const modal = {
   window: document.querySelector(".modalWindow"),
   blur: document.getElementById("blur"),
   overlay: document.querySelector(".overlay"),
-
+  result: document.getElementById("bmiresult"),
   h1: document.querySelector(".h1-results"),
 };
 
 // Conversion formula
-let bmiFormula = (feet, inches, pounds) => {
-  let fullHeight = feet * 12 + inches;
-  let formula = (pounds / fullHeight ** fullHeight) * 703;
-  document.getElementById("bmiresult").value = formula;
-};
+function bmiFormula(feet, inches, pounds) {
+  feet = HWValues.feetValue;
+  inches = HWValues.inchesValue;
+  pounds = HWValues.weightValue;
+  const fullHeight = feet * 12 + inches;
+  const formula = (pounds / fullHeight ** fullHeight) * 703;
+  modal.result.textContent = formula;
+}
 
 //Function to open Modal
 modal.convert.addEventListener("click", () => {
+  openModal();
+  bmiFormula();
+});
+function openModal() {
   modal.window.classList.remove("hidden");
   modal.overlay.classList.remove("hidden");
+}
+// keydown event to open the modal btn and to convert
 
-  bmiFormula(HWValues.feetValue, HWValues.inchesValue, HWValues.weightValue);
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
+    openModal();
+    bmiFormula();
+  }
 });
 
 //Function to close Modal
@@ -88,6 +101,11 @@ const closeModalF = () => {
   modal.window.classList.add("hidden");
   modal.overlay.classList.add("hidden");
 };
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeModalF();
+  }
+});
 
 // Function to show blur background
 

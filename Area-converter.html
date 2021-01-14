@@ -6,6 +6,12 @@
     <link rel="stylesheet" href="./css/landingpage.css" />
     <link rel="stylesheet" href="./css/responsive-converter.css" />
     <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/convertbtn.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass&display=swap"
+      rel="stylesheet"
+    />
     <title>Time</title>
   </head>
   <body>
@@ -22,16 +28,21 @@
         <h1 class="h1Message">Area converter!</h1>
       </div>
       <div class="cformr">
-        <form action="/calculate" method="post" id="convert_form">
-          <input
-            type="number"
-            size="4"
-            placeholder="Number"
-            name="cnumber"
-            id="cnumber"
-            value=""
-          />
-          <span class="fromspan">from</span>
+        <div class="input-form">
+          <h2 class="select-input-h2">input</h2>
+          <form action="/calculate" method="post" id="convert_form">
+            <input
+              type="number"
+              size="4"
+              placeholder="Number"
+              name="cnumber"
+              id="cnumber"
+              value=""
+            />
+          </form>
+        </div>
+        <div class="from-form">
+          <h2 class="select-from-h2">from</h2>
           <select name="cfrom" id="cfrom">
             <optgroup label="Main units">
               <option value="empty"></option>
@@ -50,7 +61,9 @@
               <option value="Square Yards">Square Yards</option>
             </optgroup>
           </select>
-          <span class="to">to</span>
+        </div>
+        <div class="to-form">
+          <h2 class="select-to-h2">To</h2>
           <select name="cto" id="cto">
             <optgroup label="Main units">
               <option value="empty"></option>
@@ -68,13 +81,40 @@
               <option value="Square Yards">Square Yards</option>
             </optgroup>
           </select>
+        </div>
+        <div class="convert-button">
           <button type="button" class="convertbtn">convert</button>
-        </form>
-      </div>
-      <div class="results hidden">
-        <p>Time converter:</p>
+        </div>
       </div>
     </div>
+    <!--Modal-->
+    <div class="modalWindow hidden" id="blur">
+      <div class="time-modal center">
+        <div class="close-modal-btn">
+          <button class="close-modal">dismiss</button>
+        </div>
+        <div class="conversion-modal-title">
+          <h1 class="h1-results">Results:</h1>
+        </div>
+        <div class="results-modal">
+          <p class="resultsP"></p>
+        </div>
+        <div class="input-results">
+          <p class="p-results">Your BMI:</p>
+          <h2 class="timeresult"></h2>
+          <br />
+          <h1 class="h1-results">BMI chart for adults</h1>
+          <p class="p2-results">
+            This is a graph of BMI categories based <br />
+            on the World Health Organization data. <br />
+            The dashed lines represent subdivisions within a major
+            categorization.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
+    <hr />
 
     <footer class="page2">
       <ul>
@@ -83,6 +123,7 @@
         <li><a></a></li>
       </ul>
     </footer>
+
     <script src="../src/area.js"></script>
   </body>
 </html>
