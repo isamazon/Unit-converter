@@ -93,7 +93,7 @@ body {
   margin: 0 auto;
   background-color: rgb(255, 255, 255);
   border-radius: 50px;
-  height: 80vh;
+  height: 70vh;
   margin-bottom: 20%;
   box-shadow: 10px 50px 100px;
   animation: slide_up 1.1s ease;
@@ -181,7 +181,7 @@ li {
 
 @media screen and (max-width: 980px) {
   #categories li {
-    width: calc(100% / 4);
+    width: calc(100% / 3);
   }
   .header,
   .welcomePage {
@@ -192,7 +192,7 @@ li {
     justify-content: center;
   }
   .welcomePage {
-    height: 150%;
+    height: 100%;
   }
   .welcome h1 {
     font-size: 30px;
@@ -201,11 +201,14 @@ li {
 
 @media screen and (max-width: 700px) {
   #categories li {
-    width: calc(100% / 3);
+    width: calc(100% / 2);
   }
   .header,
   .welcomePage {
     width: 80%;
+  }
+  .welcomePage {
+    height: 130%;
   }
   .header {
     margin-left: 0;
@@ -224,6 +227,7 @@ li {
   }
   .welcomePage {
     width: 90%;
+    height: 150%;
   }
   .header {
     margin: 0px 0px 0px 0px;
@@ -231,6 +235,14 @@ li {
   }
   .welcome h1 {
     font-size: 40px;
+  }
+}
+@media screen and (max-width: 355px) {
+  #categories li {
+    width: calc(100% / 1);
+  }
+  .welcomePage {
+    height: 220%;
   }
 }
 

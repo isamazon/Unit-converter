@@ -32,7 +32,7 @@ view.to.addEventListener("change", (e) => {
 // To update the value thats put in the
 view.input.addEventListener("change", (e) => {
   values.inputValue = e.target.value;
-  console.log(e.target.value);
+  //console.log(e.target.value);
 });
 
 // Adding a event listener to the convert button to perform if else statements and using function conversion and conversionTimes to convert the values

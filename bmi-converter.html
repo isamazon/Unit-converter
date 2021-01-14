@@ -31,15 +31,13 @@
       </div>
       <div class="gender-form">
         <h2 class="select-gender-h2">Gender</h2>
-        <form action="/calculate" method="post" id="convert_form">
-          <select name="gender" id="gender">
-            <optgroup label="Genders">
-              <option value="empty"></option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-            </optgroup>
-          </select>
-        </form>
+        <select name="gender" id="gender">
+          <optgroup label="Genders">
+            <option value="empty"></option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </optgroup>
+        </select>
       </div>
       <div class="height-form">
         <h2 class="select-height-h2">Height</h2>
@@ -51,6 +49,7 @@
           name="cnumber"
           id="feet"
           value=""
+          required
         />
         <input
           type="number"
@@ -59,6 +58,7 @@
           name="cnumber"
           id="inches"
           value=""
+          required
         />
       </div>
       <div class="weight-form">
@@ -86,6 +86,10 @@
           <h1 class="h1-results">Results</h1>
         </div>
         <div class="results-modal">
+          <p class="p-results">Your BMI:</p>
+          <h1 id="bmiresult"></h1>
+        </div>
+        <div class="input-results">
           <p class="resultsP">
             <b>BMI Categories:</b>
             <br />
@@ -97,10 +101,6 @@
             <br />
             Obesity = BMI of 30 or greater
           </p>
-        </div>
-        <div class="input-results">
-          <p class="p-results">Your BMI:</p>
-          <h1 id="bmiresult"></h1>
           <br />
           <h1 class="h1-results">BMI chart for adults</h1>
           <p class="p2-results">

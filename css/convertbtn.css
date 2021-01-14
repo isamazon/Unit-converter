@@ -16,7 +16,6 @@
   z-index: 3;
   background-color: #0d1117;
   overflow: scroll;
-  animation: popin 1s;
 }
 /*                  Seprate modal positioning for time                    */
 .time-modal {
@@ -85,7 +84,8 @@ h1.bmi-h1 {
   top: 30%;
   width: 100%;
   display: flex;
-
+  align-items: center;
+  flex-direction: column;
   justify-content: center;
   padding: 20px 50px;
 }
@@ -105,7 +105,12 @@ p.resultsP {
   left: 50%;
   transform: translate(-50%);
 }
-
+#bmiresult {
+  margin-top: 50px;
+  color: white;
+  align-self: center;
+  font-size: 60px;
+}
 p.p-results {
   color: white;
   letter-spacing: 5px;
@@ -114,10 +119,12 @@ p.p-results {
   padding: 10px 10px;
 }
 h1.h1-results {
-  margin-top: 50px;
+  margin-top: 20px;
   color: white;
   align-self: center;
-  font-size: 30px;
+  font-size: 40px;
+  letter-spacing: 4px;
+  animation: slide_up 1s ease;
 }
 p.p2-results {
   color: white;
@@ -148,11 +155,11 @@ p.p2-results {
 }
 
 /*                  Animations                    */
-@keyframes slide_up {
+@keyframes slide_left {
   0% {
-    transform: translateY(1500px);
+    transform: translateX(-1500px);
   }
   100% {
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }

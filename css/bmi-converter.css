@@ -183,7 +183,6 @@ h2.select-gender-h2 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border: solid 1px #0d1117;
 }
 .weight-form {
   padding-top: 30px;
@@ -192,6 +191,7 @@ h2.select-gender-h2 {
   justify-content: center;
   flex-direction: column;
 }
+
 .convert-form {
   padding: 30px 0px;
   display: flex;
@@ -321,7 +321,9 @@ h2.select-weight-h2 {
     color: grey;
     margin: 10px 20px;
   }
-
+  #convert_form {
+    width: 100%;
+  }
   #gender,
   #weight,
   #feet,

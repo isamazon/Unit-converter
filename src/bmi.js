@@ -7,17 +7,16 @@ const view = {
   weight: document.getElementById("weight"),
   bmiPage: document.querySelector(".Bmipage"),
 };
-
 // Store the height and weight values
 const HWValues = {
-  feetValue: view.feet.value,
-  inchesValue: view.inches.value,
-  weightValue: view.weight.value,
+  feetValue: parseInt(view.feet.value),
+  inchesValue: parseInt(view.inches.value),
+  weightValue: parseInt(view.weight.value),
 };
 // Create a function to display what gender we have selected visually
 const displayGender = (e) => {
   view.gender = e.target.value;
-  console.log(view.gender);
+  //console.log(view.gender);
   if (view.gender === "Male") {
     document.body.classList.add("maleGradient");
     document.body.classList.remove("femaleGradient");
@@ -49,7 +48,7 @@ view.inches.addEventListener("change", (e) => {
 // Weight Value
 view.weight.addEventListener("change", (e) => {
   HWValues.weightValue = e.target.value;
-  console.log(HWValues.weightValue);
+  //console.log(HWValues.weightValue);
 });
 
 // MODAL WINDOW
@@ -66,18 +65,16 @@ const modal = {
 
 // Conversion formula
 function bmiFormula(feet, inches, pounds) {
-  feet = HWValues.feetValue;
-  inches = HWValues.inchesValue;
-  pounds = HWValues.weightValue;
-  const fullHeight = feet * 12 + inches;
-  const formula = (pounds / fullHeight ** fullHeight) * 703;
+  const fullHeight = feet * 12 + (inches * 2) / 2;
+  const formula = (pounds / (fullHeight * fullHeight)) * 703;
+  console.log(fullHeight);
   modal.result.textContent = formula;
 }
 
 //Function to open Modal
 modal.convert.addEventListener("click", () => {
   openModal();
-  bmiFormula();
+  bmiFormula(HWValues.feetValue, HWValues.inchesValue, HWValues.weightValue);
 });
 function openModal() {
   modal.window.classList.remove("hidden");
@@ -88,7 +85,7 @@ function openModal() {
 document.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
     openModal();
-    bmiFormula();
+    bmiFormula(HWValues.feetValue, HWValues.inchesValue, HWValues.weightValue);
   }
 });
 
